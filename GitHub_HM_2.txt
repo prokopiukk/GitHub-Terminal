@@ -1,0 +1,166 @@
+GitHub. HW_2
+
+
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- BagReports
+- SQL
+- Charles
+- MobileTesting
+
+
+git branch Postman 
+...
+
+git branch - посмотреть ветки
+git checkout -b название - создать ветку и прыгнуть в неё 
+git checkout название - просто перенестись в уже существующую ветку 
+
+git commit -am "text" - add + commit только если файл add ранее, с новым файлом не работает
+git fetch - посмотреть изменения
+git pull - показывает изменения и скачивает изменения с внешнего на локальный
+git push -u origin name - залить на внешний репозиторий
+
+2. Запушить все ветки на внешний репозиторий 
+git push --set-upstream origin BugReports
+
+3. В ветке BugReports сделать текстовый документ со структурой баг репорта
+git checkout BugReports
+cat > BugStructure.txt
+
+Bug ID:
+  ID number:
+  Name:
+  Reporter:
+  Submit Date:
+
+Bug tracking:
+  Assigned to:
+  Priority:
+  Severity:
+  Reproducibility:
+  Status:
+  Resolution:
+
+Environment:
+  Platform:
+  OS version:
+  Browser:
+
+Bug overview:
+  Summary:
+  URL:
+  Attached files:
+
+Bug details:
+  Description:
+
+Steps to reproduce
+
+  
+  Actual result:
+  Expected result:
+  Additional information:
+
+
+4. Запушить структуру багрепорта на внешний репозиторий
+git add
+git commit -m "aded BugStructure.txt file"
+git push 
+
+5. Вмержить ветку BugReports в Main
+git checkout main
+git merge BugReports
+
+6. Запушить main на внешний репозиторий.
+git add.
+git commit -m 
+git push
+
+
+
+7. В ветке CheckLists набросать структуру чек листа.
+git checkout CheckLists 
+cat > CheckList_Structure.txt
+
+Product Categories
+1. Test any filters such as product filters, colours, sizes, types of product, etc.
+
+2. Test any ability to sort products by name, price, size, etc.
+
+3. Test add to shortlist or wish list facility.
+
+4. Test add to basket function.
+
+Product Detail Pages
+1. Check product images.
+
+2. Test enlarge image function.
+
+3. Test 360 degree view of products function.
+
+4. Check related products.
+
+5. Check any further product information, colours, sizes, options and extras.
+
+6. Test add to basket function.
+
+Product Search
+Keyword search
+
+Shopping Basket
+1. Add products to basket.
+
+2. Remove product from basket.
+
+3. Change quantities.
+
+4. Select delivery option.
+
+5. Check VAT and delivery costs add up correctly.
+
+Pay Now
+1. Move into checkout process.
+
+Checkout Process
+1. Test checkout process
+
+2. Final amount to pay – make sure that this value is correct, after the price of the products, VAT, delivery and any other charges.
+
+3. Test making changes to the products being ordered, changing delivery options, etc. and make sure that the final amount updates correctly.
+
+Payments
+1. Carry out a test payment using each payment method that you are offering.
+
+2. Place Paypal payment.
+
+3. Place Visa payment.
+
+4. Place Visa Debit payment.
+
+5. Place Visa Electron payment.
+
+6. Place Mastercard payment.
+
+7. Place Amex payment.
+
+8. Place false payment.
+
+9. Test cancelling order.
+
+10. Check that confirmation emails are sent correctly when a payment is made.
+
+11. Make sure that you can refund a payment.
+
+12. Any refund confirmation emails are sent to the recipient successfully.
+
+8. Запушить структуру на внешний репозиторий
+git add bez
+git commit -m "add CheckList_Structure.txt file"
+git push
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+10. Синхронизировать Внешнюю и Локальную ветки Main
+git pull
