@@ -1,0 +1,75 @@
+1) Посмотреть где я ------- pwd
+2) Создать папку ------- mkdir f_1
+3) Зайти в папку ------- cd f_1
+4) Создать 3 папки ------- mkdir f_1 f_2 f_3
+5) Зайти в любоую папку ------- cd f_2
+6) Создать 5 файлов (3 txt, 2 json) ------- touch t_1.txt t_2.txt t_3.txt j_1.json j_2.json
+7) Создать 3 папки ------- mkdir q_1 q_2 q_3
+8. Вывести список содержимого папки ------- ls -la
+9) + Открыть любой txt файл ------- vim t_1.txt
+10) + написать туда что-нибудь, любой текст. ------- i -> hello world
+11) + сохранить и выйти. ------- esc -> :wq
+12) Выйти из папки на уровень выше ------- cd ..
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. -------   mv j_1.json j_2.json ~/Desktop/qa/group_26/f_3
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. -------   cp j_1.json j_2.json ../f_2/
+15) Найти файл по имени -------
+      find .. -name "HM_1_Terminal.txt" 
+ или  find ~/Desktop -name "HM_1_Terminal.txt"
+ или  find ~/Desktop -name "*.txt"
+ или  find /c -name "*.txt"
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. ------- tail -f lesson.txt    grep-фильтр
+17) вывести несколько первых строк из текстового файла ------- head -5 HM_1_Terminal.txt
+18) вывести несколько последних строк из текстового файла -------  tail -5 HM_1_Terminal.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. ------- 
+   less HM_1_Terminal.txt  -утилита, открывает файл и можно искать нужные слова
+   cat HM_1_Terminal.txt -просто выводит содержимое в терминал
+20) вывести дату и время ------- date
+
+
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+---------------
+
+ curl http://162.55.220.72:5005/terminal-hw-request
+ curl "http://162.55.220.72:5005/get_method?name=katya&age=24"
+
+
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+---------------
+
+touch myscript
+vim myscript
+
+       #!/bin/bash
+       cd script
+       mkdir f_1 f_2 f_3
+       cd f_2
+       touch t_1.txt t_2.txt t_3.txt j_1.json j_2.json
+       mkdir q_1 q_2 q_3
+       ls -la
+       mv j_1.json j_2.json ~/Desktop/qa/group_26/lesson1/f_1/homework/script/f_3
+
+
+chmod +x ./myscript
+./myscript
+       Катя@DESKTOP-PJPCT5R MINGW64 ~/Desktop/qa/group_26/lesson1/f_1/homework
+       $ ./myscript
+       /c/Users/Катя/Desktop/qa/group_26/lesson1/f_1/homework
+       total 4
+       drwxr-xr-x 1 Катя 197121 0 Jan  8 21:06 .
+       drwxr-xr-x 1 Катя 197121 0 Jan  8 21:06 ..
+       -rw-r--r-- 1 Катя 197121 0 Jan  8 21:06 j_1.json
+       -rw-r--r-- 1 Катя 197121 0 Jan  8 21:06 j_2.json
+       drwxr-xr-x 1 Катя 197121 0 Jan  8 21:06 q_1
+       drwxr-xr-x 1 Катя 197121 0 Jan  8 21:06 q_2
+       drwxr-xr-x 1 Катя 197121 0 Jan  8 21:06 q_3
+       -rw-r--r-- 1 Катя 197121 0 Jan  8 21:06 t_1.txt
+       -rw-r--r-- 1 Катя 197121 0 Jan  8 21:06 t_2.txt
+       -rw-r--r-- 1 Катя 197121 0 Jan  8 21:06 t_3.txt
+
+
+
